@@ -1,0 +1,39 @@
+<div class="container">
+    <div>
+      <h1>Edit Dependent</h1>
+    </div>
+    <div>
+      <form #f="ngForm" novalidate (ngSubmit)="saveDependent()" [formGroup]="dependentForm">
+        <ul class="flex-list">
+          <li>
+              <label for="firstName">First Name</label>
+              <mat-form-field>
+                <input matInput id="firstName" name="firstName" autofocus maxlength="30" [formControl]="dependentForm.controls.firstName" placeholder="Enter first name" />
+                <mat-error *ngIf="dependentForm.controls.firstName.errors?.required">
+                  First Name is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+          </li>
+          <li>
+              <label for="lastName">Last Name</label>
+              <mat-form-field>
+                <input matInput id="lastName" name="lastName" maxlength="30" [formControl]="dependentForm.controls.lastName" placeholder="Enter last name" />
+                <mat-error *ngIf="dependentForm.controls.lastName.errors?.required">
+                  Last Name is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+          </li>
+          <li>
+            <ul class="flex-button-list">
+              <li>
+                <button mat-raised-button color="primary" type="submit" [disabled]="!dependentForm.valid" ><mat-icon>done</mat-icon>Save</button>
+              </li>
+              <li>
+                <button mat-raised-button type="button" [routerLink]="['/employees', employeeId, 'dependents', dependentId]">Cancel</button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>

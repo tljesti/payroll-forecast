@@ -1,0 +1,8 @@
+.container { display: flex; }
+table { width: 500px; }
+label { width: 140px; font-weight: bold; display: inline-block; }
+
+.paymentSummaryList label { width: 400px; }
+.paymentSummaryList .value { width: 100px; display: inline-block; text-align: right; }
+.deductionItem label { font-weight: inherit; }
+.deduction { color: red; }

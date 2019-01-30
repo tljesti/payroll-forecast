@@ -1,0 +1,20 @@
+<div class="container" *ngIf="dependent" fxLayout="column" fxLayoutAlign="start start">
+    <div>
+      <h1>Dependent Details for {{dependent.firstName}} {{dependent.lastName}}</h1>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px">
+      <div>
+        <label>First Name:</label>
+        <span>{{dependent.firstName}}</span>
+      </div>
+      <div>
+        <label>Last Name:</label>
+        <span>{{dependent.lastName}}</span>
+      </div>
+      <div fxLayout="row" fxLayoutGap="5px">
+        <button mat-raised-button type="button" color="primary" [routerLink]="['/employees', employeeId, 'dependent-update', dependentId]">Edit Dependent</button>
+        <button mat-raised-button type="button" color="primary" (click)="removeDependent()" >Remove Dependent</button>
+        <button mat-raised-button type="button" color="primary" [routerLink]="['/employees', employeeId]" >Return</button>
+      </div>
+    </div>
+  </div>

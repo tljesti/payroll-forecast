@@ -1,0 +1,34 @@
+<div>
+  <h1>Employees</h1>
+</div>
+
+<span>Note: Click on an employee below to modify the employee, add/edit/remove dependents, as well as view their yearly payment summary.</span>
+
+<div class="buttonContainer">
+  <button mat-raised-button color="primary" [routerLink]="['/employee-add']"><mat-icon>add</mat-icon> Add New Employee</button>
+</div>
+
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  
+    <!-- First Name Column -->
+    <ng-container matColumnDef="firstName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+    </ng-container>
+  
+    <!-- LastName Column -->
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+    </ng-container>
+  
+    <!-- LastName Column -->
+    <ng-container matColumnDef="yearlyPayment">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Yearly Payment </th>
+      <td mat-cell *matCellDef="let element"> {{element.yearlyPayment | currency:"$"}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; let element; columns: displayedColumns;" [routerLink]="['/employees', element.id]"></tr>
+
+</table>

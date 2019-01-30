@@ -1,0 +1,41 @@
+.container {
+    max-width: 1200px;
+    margin: 0 10px;
+  }
+  
+  .container * {
+    box-sizing: border-box;
+  }
+  
+  .flex-list,
+  .flex-button-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .flex-list {
+    max-width: 400px;
+  }
+  
+  .flex-list li,
+  .flex-button-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .flex-list > li > label,
+  .flex-list > li p {
+    flex: 1 0 60px;
+    max-width: 120px;
+  }
+  
+  .flex-list > li > label + * ,
+  .flex-button-list {
+    flex: 1 0 120px;
+  }
+  
+  .flex-button-list li button {
+    width: 100px;
+    margin: 5px;
+  }
