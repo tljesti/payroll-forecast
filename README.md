@@ -67,10 +67,12 @@ cd PayrollForecast.Client
 ```
 npm install
 ```
-9. Once all packages are installed, run the following to compile and run the Angular application
+9. Once all packages are installed, run the following to compile and run the Angular application:
 ```
 ng serve -o
 ```
+* Please note that the client application will run on http://localhost:4200.
+
 If all works well, then you will be greeted to the Employees component of the application:
 ![MyImage](https://i.imgur.com/nn8aHAb.png)
 
