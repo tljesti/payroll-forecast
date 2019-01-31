@@ -56,11 +56,6 @@ namespace PayrollForecast.Api
                 app.UseDeveloperExceptionPage();
             }
 
-            AutoMapper.Mapper.Initialize(config =>
-            {
-                config.CreateMap<Entities.Employee, Dtos.EmployeeDto>();
-            });
-
             app.UseCors(_corsPolicy);
 
             app.UseMvc();
