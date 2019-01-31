@@ -79,6 +79,8 @@ If all works well, then you will be greeted to the Employees component of the ap
 To observe the details of an employee (dependents, yearly payment information, etc), simply click on an employee record on the table.  This will take you to the details component for that employee:
 ![MyImage](https://i.imgur.com/dQGdrz5.png)
 
+* Please note that in order to stop the frontend/backend services running, simply Ctrl-C while inside of the terminals.
+
 ## Running the tests
 
 To run tests against the business logic of the application, please perform the following steps:
