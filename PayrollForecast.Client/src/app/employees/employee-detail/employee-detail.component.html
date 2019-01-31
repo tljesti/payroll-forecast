@@ -49,7 +49,7 @@
     <div>
       <mat-list class="paymentSummaryList">
         <mat-list-item>
-          <label>Initial Payment:</label>
+          <label>Initial End-of-year Payment:</label>
           <span class="value">{{employee.yearlyPaymentSummary.initialValue | currency:'$'}}</span>
         </mat-list-item>
         <mat-list-item *ngFor="let deduction of employee.yearlyPaymentSummary.deductions" class="deductionItem">
